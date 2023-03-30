@@ -1,4 +1,4 @@
-# Nondeterministic finite automata
+# Nondeterministic finite automaton
 
 ## Table of contents
 
@@ -17,6 +17,18 @@
 This project is a result of praticial work for the Computer Theory class at UFPI. This application is a simple terminal program that consists of converting non-determinist finite automatons with epsilon transition into non-deterministic finite automatons and do the recognition of a word in it.
 
 ## Preview
+
+- Initial screen
+![initial-screen-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/initialScreen.png)
+
+- Choose sample
+![sample-choose-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/chooseSample.png)
+
+- Loaded NFA
+![loaded-nfa-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/loadedNFA.png)
+
+- Recognition
+![recognition-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/recognition.png)
 
 ## Installation
 
