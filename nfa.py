@@ -98,7 +98,12 @@ Has Epsilon Transition: {self.hasEpsilonTransition}
   def regognition(self, word):
     if not self._assertWord(word): raise Exception('Word has invalid symbols for NFA alphabet')
 
-    if self.hasEpsilonTransition: self.convertToNFA()
+    if self.hasEpsilonTransition: 
+      print('\nEpsilon transition detected. Converting to NFA...')
+      self.convertToNFA()
+      print('After converting to NFA: ')
+      print('Transition Functions:', printTransitions(self.transitionFunctions))
+
     
     activeStates = self.programFunction([self.initialState])
     print('\n&(state, symbol): {active states}')
