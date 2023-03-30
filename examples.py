@@ -1,6 +1,6 @@
 def sample0():
   """
-    Recognized language: Language where antepenultimate symbol is 1 | RE: (0+1)*1(0+1)(0+1)
+    Recognized language: Words whose third-to-last symbol is 1 | RE: (0+1)*1(0+1)(0+1)
     params: nothing;
     return: 
       states -> list of states;
@@ -193,7 +193,7 @@ def sample6():
   return states, alphabet, transitionFunctions, initialState, finalStates
 
 
-def sample8():
+def sample7():
   """
     Recognized language: Words where b and c only appear after the occurrence of a | RE: (a(b+c)*)* | e
     params: nothing;
@@ -219,7 +219,7 @@ def sample8():
 
   return states, alphabet, transitionFunctions, initialState, finalStates
 
-def sample9():
+def sample8():
   """
     Recognized language: Words that contain a as suffix or ba as prefix | RE: (a+b)*a | ba(a+b)* 
   """

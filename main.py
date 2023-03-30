@@ -29,7 +29,7 @@ if __name__ == '__main__':
     
     elif response == '2':
       print('''
-        1 - Language where antepenultimate symbol is 1 | RE: (0+1)*1(0+1)(0+1)
+        1 - Words whose third-to-last symbol is 1 | RE: (0+1)*1(0+1)(0+1)
         2 - Words that starts with 0 and ends with 1 | RE: 0(0+1)*1
         3 - Words that starts with 001 | RE: 001(0+1)*
         4 - Words witch contains 110 as substring | RE: (0+1)*110(0+1)*
