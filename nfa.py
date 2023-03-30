@@ -101,13 +101,50 @@ class NFA:
     if self.hasEpsilonTransition: self.convertToNFA()
     
     activeStates = self.programFunction([self.initialState])
+    print('\n&(state, symbol): {active states}')
+    index = 0
     for symbol in word:
-      # print(f"D")
       newActiveStates = set()
       for state in activeStates:
         if (state, symbol) in self.transitionFunctions:
           newActiveStates.update(self.programFunction(self.transitionFunctions[(state, symbol)]))
+          print(f'&({state}, {highlightSymbolInWord(word, index)}): {newActiveStates}')
+        else: print(f'&({state}, {highlightSymbolInWord(word, index)}): Does not exist')
 
       activeStates = newActiveStates
+      index += 1  
     
     return len(activeStates.intersection(self.finalStates)) > 0
+  
+def generateNFAFromFile(fileName): 
+  with open(fileName, 'r') as file:
+    lines = file.readlines()
+    statesSet = lines[0].replace(' ', '').replace('\n', '').split(',')
+    alphabet = lines[1].replace(' ', '').replace('\n', '').split(',')
+    amountOfTransitionFunctions = int(lines[2].replace(' ', '').replace('\n', ''))
+    transitionFunctions = {}
+    for i in range(3, 3 + amountOfTransitionFunctions):
+      transitionFunction, achievedStates = lines[i].replace(' ', '').replace('\n', '').split(':')
+      transitionFunction = tuple(transitionFunction.replace('(', '').replace(')', '').split(','))
+      achievedStates = set(achievedStates.replace('(', '').replace(')', '').split(','))
+
+      if transitionFunction in transitionFunctions:
+        transitionFunctions[transitionFunction].add(achievedStates)
+      else:
+        transitionFunctions[transitionFunction] = set(achievedStates)
+      
+    initialState = lines[3 + amountOfTransitionFunctions].replace(' ', '').replace('\n', '')
+    finalStates = lines[4 + amountOfTransitionFunctions].replace(' ', '').replace('\n', '').replace('(', '').replace(')', '').split(',')
+    finalStates = set(finalStates)
+
+    return NFA(statesSet, alphabet, transitionFunctions, initialState, finalStates)
+
+def highlightSymbolInWord(word, index):
+  highlightedWord = ''
+  for i in range(len(word)):
+    if i == index:
+      highlightedWord += f'\033[1;31m{word[i]}\033[0;0m'
+    else:
+      highlightedWord += word[i]
+  
+  return highlightedWord

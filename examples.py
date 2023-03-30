@@ -27,7 +27,7 @@ def sample0():
 
 def sample1():
   """
-    Recognized language: Words starts with 0 and ends with 1 | RE: 0(0+1)*1
+    Recognized language: Words that starts with 0 and ends with 1 | RE: 0(0+1)*1
     params: nothing;
     return: 
       states -> list of states;
@@ -51,7 +51,7 @@ def sample1():
 
 def sample2():
   """
-    Recognized language: Words starts with 001 | RE: 001(0+1)*
+    Recognized language: Words that starts with 001 | RE: 001(0+1)*
     params: nothing;
     return: 
       states -> list of states;
@@ -192,37 +192,10 @@ def sample6():
 
   return states, alphabet, transitionFunctions, initialState, finalStates
 
-# def sample7():
-#   """
-#     Recognized language: Words that contain only 0's and amount of 0 is multiple of 2 or 3 | RE: (0+1)*0(0+1)*0(0+1)* | (0+1)*0(0+1)*0(0+1)*0(0+1)*
-#     params: nothing;
-#     return:
-#       states -> list of states;
-#       alphabet -> list of symbols;
-#       transitionFunctions -> dictionary of transition functions in form: key: (state, symbol), value: set of states in form: {state1, state2, ...};
-#       initialState -> initial state;
-#       finalStates -> set of final states in form: {state1, state2, ...};
-#   """
-
-#   states = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']
-#   alphabet = ['0']
-#   transitionFunctions = {
-#     ('q1', 'epsilon'): {'q4', 'q3'},
-#     ('q4', '0'): {'q2'},
-#     ('q2', '0'): {'q4'},
-#     ('q3', '0'): {'q5'},
-#     ('q5', '0'): {'q6'},
-#     ('q6', '0'): {'q3'},
-#   }
-
-#   initialState = 'q1'
-#   finalStates = {'q4', 'q3'}
-
-#   return states, alphabet, transitionFunctions, initialState, finalStates
 
 def sample8():
   """
-    Recognized language: Words where b and c only appear after the occurrence of a | RE: a(b+c)* | e
+    Recognized language: Words where b and c only appear after the occurrence of a | RE: (a(b+c)*)* | e
     params: nothing;
     return:
       states -> list of states;
