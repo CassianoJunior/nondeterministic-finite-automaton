@@ -19,16 +19,16 @@ This project is a result of praticial work for the Computer Theory class at UFPI
 ## Preview
 
 - Initial screen
-![initial-screen-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/initialScreen.png)
+<img src='https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/initialScreen.png' alt='initial-screen-image' height='150' />
 
 - Choose sample
-![sample-choose-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/chooseSample.png)
+<img src='https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/chooseSample.png' alt='sample-choose-image' height='200' />
 
 - Loaded NFA
-![loaded-nfa-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/loadedNFA.png)
+<img src='https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/loadedNFA.png' alt='loaded-nfa-image' height='200' />
 
 - Recognition
-![recognition-image](https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/recognition.png)
+<img src='https://gist.githubusercontent.com/CassianoJunior/b351deb869c0db14d9cad43fc7bad970/raw/0daafe8fa222a5b1f7e4bc8f9a88ede307f0d476/recognition.png' alt='recognition-image' height='200' />
 
 ## Installation
 
