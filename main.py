@@ -11,9 +11,9 @@ if __name__ == '__main__':
 
   while True:
     print('''
-      1 - Load NFA from file
-      2 - Try existing examples
-      0 - Exit
+1 - Load NFA from file
+2 - Try existing examples
+0 - Exit
     ''')
     response = input('> ')
     if response == '0': break
@@ -29,15 +29,15 @@ if __name__ == '__main__':
     
     elif response == '2':
       print('''
-        1 - Words whose third-to-last symbol is 1 | RE: (0+1)*1(0+1)(0+1)
-        2 - Words that starts with 0 and ends with 1 | RE: 0(0+1)*1
-        3 - Words that starts with 001 | RE: 001(0+1)*
-        4 - Words witch contains 110 as substring | RE: (0+1)*110(0+1)*
-        5 - Words that start and end with the same symbol | RE: 0(0+1)*0 | 1(0+1)*1 | 0 | 1
-        6 - Words that contain a or bb or ccc as a suffix | RE: (a+b+c)*a | (a+b+c)*bb | (a+b+c)*ccc
-        7 - Only accepts aa or bb | RE: aa | bb
-        8 - Words where b and c only appear after the occurrence of a | RE: (a(b+c)*)* | e
-        9 - Words that contain a as suffix or ba as prefix | RE: (a+b)*a | ba(a+b)*
+1 - Words whose third-to-last symbol is 1 | RE: (0+1)*1(0+1)(0+1)
+2 - Words that starts with 0 and ends with 1 | RE: 0(0+1)*1
+3 - Words that starts with 001 | RE: 001(0+1)*
+4 - Words witch contains 110 as substring | RE: (0+1)*110(0+1)*
+5 - Words that start and end with the same symbol | RE: 0(0+1)*0 | 1(0+1)*1 | 0 | 1
+6 - Words that contain a or bb or ccc as a suffix | RE: (a+b+c)*a | (a+b+c)*bb | (a+b+c)*ccc
+7 - Only accepts aa or bb | RE: aa | bb
+8 - Words where b and c only appear after the occurrence of a | RE: (a(b+c)*)* | e
+9 - Words that contain a as suffix or ba as prefix | RE: (a+b)*a | ba(a+b)*
         ''')
       response = input('> ')
       sampleChoosen = None
