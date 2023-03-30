@@ -17,12 +17,12 @@ class NFA:
   
   def __str__(self):
     return f"""
-      States: {self.statesSet}
-      Alphabet: {self.alphabet}
-      Transition Functions: {self.transitionFunctions}
-      Initial State: {self.initialState}
-      Final States: {self.finalStates}
-      Has Epsilon Transition: {self.hasEpsilonTransition}
+States: {self.statesSet}
+Alphabet: {self.alphabet}
+Transition Functions: {printTransitions(self.transitionFunctions)}
+Initial State: {self.initialState}
+Final States: {self.finalStates}
+Has Epsilon Transition: {self.hasEpsilonTransition}
     """
   
   def isNFAe(self):
@@ -143,8 +143,15 @@ def highlightSymbolInWord(word, index):
   highlightedWord = ''
   for i in range(len(word)):
     if i == index:
-      highlightedWord += f'\033[1;31m{word[i]}\033[0;0m'
+      highlightedWord += f'\033[1;31m|{word[i]}|\033[0;0m'
     else:
       highlightedWord += word[i]
   
   return highlightedWord
+
+def printTransitions(transitionFunctions):
+  transitions = '{\n'
+  for transitionFunction in transitionFunctions:
+    transitions += f'  {transitionFunction}: {transitionFunctions[transitionFunction]}\n'
+  
+  return f'{transitions}}}'
